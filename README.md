@@ -10,6 +10,6 @@ A copy of the completion script from the [docker-machine](https://github.com/doc
 
 ```
 cd ~/.oh-my-zsh/custom/plugins
-git clone https://github.com/poma/zsh-docker-machine
-# edit ~/.zshrc and add `zsh-docker-machine` to plugin list
+git clone https://github.com/poma/docker-machine
+# edit ~/.zshrc and add `docker-machine` to plugin list
 ```
