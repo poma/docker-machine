@@ -24,7 +24,7 @@ __docker_machine_wrapper () {
         # Special use wrapper
         shift 1
         case "$1" in
-            -h|--help|"")
+            -h|--help)
                 cat <<EOF
 Usage: docker-machine use [OPTIONS] [arg...]
 Evaluate the commands to set up the environment for the Docker client
@@ -34,6 +34,10 @@ Options:
    --swarm	Display the Swarm config instead of the Docker daemon
    --unset, -u	Unset variables instead of setting them
 EOF
+                ;;
+            "")
+                eval "$(docker-machine env -u)"
+                echo "Active machine: none"
                 ;;
             *)
                 eval "$(docker-machine env "$@")"
